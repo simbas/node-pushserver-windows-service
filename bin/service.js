@@ -4,11 +4,7 @@ var path = require('path'),
 // Create a new service object
 var svc = new Service({
     name: 'pushserver',
-    script: path.join(__dirname, 'pushserver.js'),
-    env: [{
-        name: 'PUSHCONFIGPATH',
-        value: path.join(process.env['USERPROFILE'], '/push/config.json')
-    }]
+    script: path.join(__dirname, 'pushserver.js')
 });
 
 svc.on('uninstall',function(){
