@@ -18,7 +18,7 @@ program.version(pack.version)
     .option("-c --config <configPath>", "Path to config file")
     .parse(process.argv);
 
-var configPath = program.config;
+var configPath = program.config || process.env['PUSHCONFIGPATH'];
 if (configPath) {
     configPath = configPath.indexOf('/') === 0 ? configPath : path.join(process.cwd(), configPath);
     if (!fs.existsSync(configPath)) {
