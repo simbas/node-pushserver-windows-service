@@ -7,4 +7,5 @@
  * To change this template use File | Settings | File Templates.
  */
 
+var web = require('../lib/Web');
 web.start();
